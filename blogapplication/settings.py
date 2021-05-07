@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'storages',
-    'taggit'
+    #'taggit'
 ]
 
 INSTALLED_APPS += ('django_summernote', )
