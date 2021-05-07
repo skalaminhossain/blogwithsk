@@ -31,7 +31,7 @@ def personalblog(request):
 
 def blogDetails(request, slug):
     personalblog = Personalblog.objects.get(slug=slug)
-    similar_post = personalblog.tags.similar_objects()[:4]
+    #similar_post = personalblog.tags.similar_objects()[:4]
     comments = personalblog.comments.all()
 
     if request.method == 'POST':
@@ -48,7 +48,7 @@ def blogDetails(request, slug):
         comment_form = CommentForm()
     context = {
         "personalblog":personalblog,
-        'similar_post': similar_post,
+        #'similar_post': similar_post,
         'comments': comments
     }
     return render(request, 'blueberry/details.html', context)
