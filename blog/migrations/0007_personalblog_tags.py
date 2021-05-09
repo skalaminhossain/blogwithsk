@@ -7,7 +7,6 @@ import taggit.managers
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('taggit', '0004_auto_20210507_0315'),
         ('blog', '0006_comment'),
     ]
 
