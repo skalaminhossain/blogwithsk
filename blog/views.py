@@ -48,7 +48,7 @@ def blogDetails(request, slug):
         comment_form = CommentForm()
     context = {
         "personalblog":personalblog,
-        #'similar_post': similar_post,
+        'similar_post': similar_post,
         'comments': comments
     }
     return render(request, 'blueberry/details.html', context)
