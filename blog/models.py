@@ -14,7 +14,7 @@ class Personalblog(models.Model):
     slug = models.SlugField()
     description = models.TextField()
     timecase = models.DateTimeField( auto_now_add=True)
-    #tags =TaggableManager()
+    tags =TaggableManager()
     thumbnail = models.ImageField(upload_to='album/skalaminhossain/')
     
     def __str__(self):
