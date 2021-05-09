@@ -31,7 +31,7 @@ def personalblog(request):
 
 def blogDetails(request, slug):
     personalblog = Personalblog.objects.get(slug=slug)
-    #similar_post = personalblog.tags.similar_objects()[:4]
+    similar_post = personalblog.tags.similar_objects()[:4]
     comments = personalblog.comments.all()
 
     if request.method == 'POST':
