@@ -19,7 +19,7 @@ def blog(request):
 
 def personalblog(request):
     personalblog = Personalblog.objects.all()
-    paginator = Paginator(personalblog, 3)
+    paginator = Paginator(personalblog, 1)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     context = {
